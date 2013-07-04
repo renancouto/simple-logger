@@ -1,0 +1,16 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+body{background:#262626;font:14px Arial,sans-serif;text-shadow:0 1px 1px rgba(255,255,255,0.5);}
+body.error .displayer{background:#ff5e5e}
+body.success .displayer{background:#6ad06f}
+.displayer{background:#ccc;padding:15% 10%;text-align:center;}
+.displayer .heading{font-weight:700;font-size:40px;margin-bottom:2%}
+.displayer .info{font-size:12px}
+.logger{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,0.5)), color-stop(0.05, rgba(0,0,0,0)));background:-webkit-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 5px);background:-moz-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 5px);background:-o-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 5px);background:-ms-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 5px);background:linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 5px);color:#f2f2f2;font:14px monospace;text-shadow:0 1px 1px rgba(0,0,0,0.5);}
+.logger .item{border-top:1px solid rgba(0,0,0,0.2);padding:1%;}
+.logger .item.starter{border-top:3px double rgba(0,0,0,0.3)}
+.logger .item:first-child{border:none}

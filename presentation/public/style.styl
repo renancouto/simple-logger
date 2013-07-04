@@ -1,0 +1,51 @@
+@import 'nib'
+
+gray = #ccc
+yellow = #ff3
+red = #ff5e5e
+green = #6ad06f
+u = 1%
+
+global-reset()
+
+body
+	background darken(#fff, 85)
+	font 14px Arial, sans-serif
+	text-shadow 0 1px 1px rgba(255,255,255,.5)
+
+	&.error
+		.displayer
+			background red
+
+	&.success
+		.displayer
+			background green
+
+.displayer
+	background gray
+	padding u*15 u*10
+	text-align center
+
+	.heading
+		font-weight 700
+		font-size 40px
+		margin-bottom u*2
+
+	.info
+		font-size 12px
+
+.logger
+	background linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,0) 5px);
+	color darken(#fff, 5%)
+	font 14px monospace
+	text-shadow 0 1px 1px rgba(0,0,0,.5)
+
+	.item
+		border-top 1px solid rgba(0,0,0,.2)
+		padding u
+
+		&.starter
+			border-top 3px double rgba(0,0,0,.3)
+
+		&:first-child
+			border none

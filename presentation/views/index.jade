@@ -1,0 +1,31 @@
+!!!
+html
+	head
+		title= 'Simple Logger'
+		link(rel='stylesheet', href='/style.css')
+
+	body
+		div.main-wrapper
+			section#displayer.displayer
+
+			section.logger
+				ul#logger.items
+
+		//- templates
+		script#tmpl-displayer(type='text/template')
+			h1.heading!= '<%= it.heading %>'
+			p.info!= '<%= it.info %>'
+
+		script#tmpl-logger(type='text/template')
+			!= '<% _.each(it.items, function(item){ %>'
+			| <li class="item <%= item.style %>"><%= item.label %></li>
+			!= '<% }); %>'
+
+		//- scripts
+		script(src='../socket.io/socket.io.js')
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+		script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js')
+		script(src='/app.js')
+		script
+			$(function(){ window.SL = new SimpleLogger('!{url}'); })
+
