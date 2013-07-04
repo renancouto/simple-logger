@@ -2,6 +2,7 @@ var express = require('express'),
     stylus = require('stylus'),
     nib = require('nib'),
     app = express(),
+    url,
     io,
     port = 3700; // pick your own
 
@@ -22,7 +23,7 @@ app.use(stylus.middleware({ src: __dirname + '/presentation/public', compile: st
 
 // routes
 app.get('/', function(req, res){
-    res.render('index', { url: 'http://localhost:' + port });
+    res.render('index', { url: (process.argv[2] || 'http://localhost:') + port });
 });
 
 // socket
